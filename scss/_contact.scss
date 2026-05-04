@@ -1,0 +1,142 @@
+@use "foundation/functions" as *;
+@use "foundation/variables";
+
+.p-contact-page {
+  margin: rem(70) 0 rem(300.7);
+  letter-spacing: 0.05em;
+
+  &__lead {
+    text-align: center;
+    font-weight: 300;
+    font-size: rem(15);
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    color: var(--color-text);
+    margin-bottom: rem(40);
+
+    .pc-none {
+      display: none;
+    }
+  }
+}
+
+.p-contact-form {
+  margin: 0 auto;
+  max-width: rem(750);
+  padding: rem(90);
+  background-color: var(--color-bg-light);
+
+  .p-contact-form__submit {
+    width: rem(220);
+    height: rem(56);
+    font-size: rem(14);
+  }
+}
+
+.p-contact-form__list {
+  padding-bottom: rem(20);
+
+  .p-contact-form__row {
+    margin-bottom: rem(30);
+  }
+}
+
+dt {
+  color: variables.$color-text;
+  font-weight: 600;
+  font-size: rem(15);
+  line-height: 1.8;
+
+  .p-contact-form__required {
+    font-size: rem(12);
+    line-height: 1;
+    color: var(--color-primary);
+    margin-left: rem(6);
+  }
+
+  .p-contact-form__note {
+    font-weight: 300;
+    font-size: rem(12);
+    line-height: 1;
+  }
+}
+
+dd {
+  color: var(--color-text);
+  font-weight: 300;
+  font-size: rem(15);
+  line-height: 1.5;
+
+  label:has(input[type="radio"]) {
+    margin-right: rem(35);
+  }
+}
+
+input[type="radio"] {
+  margin-right: rem(3);
+  vertical-align: middle;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: rem(300);
+  height: rem(44.3);
+  border: 1px solid #AAAAAA;
+  border-radius: rem(5);
+  background: #fff;
+  color: var(--color-text);
+  font-size: rem(15);
+  line-height: 1.8;
+  padding: rem(8);
+}
+
+textarea {
+  max-width: rem(600);
+  height: rem(200);
+}
+
+@media screen and (max-width: 767px) {
+
+  .p-contact-page {
+    margin: rem(40) 0;
+
+    &__lead {
+      margin-bottom: rem(30);
+
+      .pc-none {
+        display: block;
+      }
+    }
+  }
+
+  .p-contact-form {
+    padding: rem(30);
+  }
+
+  dt {
+    margin-bottom: rem(11);
+  }
+
+  dd {
+    font-size: rem(14);
+  }
+
+  input[type="radio"] {
+    margin-right: rem(5);
+  }
+
+  .p-contact-form__radio {
+    label {
+      display: block;
+      margin-bottom: rem(5);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

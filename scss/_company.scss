@@ -1,0 +1,175 @@
+@use "foundation/functions" as *;
+@use "foundation/variables";
+
+.p-message__container {
+  display: flex;
+  gap: rem(50);
+  padding: 0 rem(96) rem(140);
+}
+
+.p-message__image {
+  flex: 0 1 rem(445);
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.p-message__text {
+  flex: 1 1 rem(615);
+
+  p {
+    margin-bottom: rem(30);
+    color: var(--color-text);
+    letter-spacing: 0.05em;
+    font-size: rem(15);
+    line-height: 1.8;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.p-company-info__container {
+  padding: 0 rem(96) rem(110);
+}
+
+.p-company-info__list {
+  padding: rem(30) 0 rem(60);
+}
+
+.p-company-info__row {
+  display: flex;
+  padding: rem(30) rem(10);
+  border-bottom: 1px solid #ddd;
+  color: var(--color-text);
+  letter-spacing: 0.05em;
+  font-size: rem(15);
+
+  dt {
+    width: rem(222);
+  }
+}
+
+.p-company-info__map {
+  text-align: center;
+  width: 100%;
+  aspect-ratio: 111 / 40;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+.p-company-info__map-link a {
+  color: #240B6B;
+  letter-spacing: 0.05em;
+  font-size: rem(14);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .p-message__container {
+    display: block;
+  }
+
+  .p-message__image,
+  .p-message__text {
+    width: 100%;
+    flex: none;
+  }
+
+  .p-message__image {
+    width: rem(345);
+    margin: 0 auto rem(20);
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  #company.p-company--detail {
+    padding: rem(60) 0;
+
+    .c-section-title__main {
+      font-weight: 600;
+      font-size: rem(24);
+    }
+
+    .pc-none {
+      display: block;
+    }
+
+    .p-company__description {
+      padding: 0;
+    }
+  }
+
+  .p-message__container {
+    padding: 0 0 rem(100);
+
+    .p-message__image {
+      width: rem(345);
+      margin: 0 auto rem(20);
+    }
+
+    .p-message__text p {
+      font-size: rem(14);
+    }
+  }
+
+  .p-company-info__container {
+    padding: 0 0 rem(80);
+
+    .c-section-title__main {
+      font-weight: 600;
+      font-size: rem(24);
+    }
+  }
+
+  .p-company-info__list {
+    padding: rem(50) 0 rem(40);
+  }
+
+  .p-company-info__row {
+    display: block;
+    padding: 0 0 rem(20);
+
+    dt {
+      margin-bottom: rem(5);
+      font-weight: 600;
+      line-height: 1.8;
+    }
+  }
+
+  .p-company-info__map {
+    aspect-ratio: 23 / 16;
+  }
+
+  .p-contact__text .pc-none {
+    display: block;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

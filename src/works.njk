@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pon-design</title>
+  <meta name="description" content="PON DESIGNは、Webサイト制作・運用・アプリ開発を行うWeb制作会社です。">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+{% include "_partials/header.njk" %}
+<main>
+  <section class="p-sub-header">
+    <div class="container l-container">
+      <h1 class="c-section-title c-title">
+        <span class="c-section-title__main">WORKS</span>
+        <span class="c-section-title__sub">制作実績</span>
+      </h1>
+    </div>
+  </section>
+  <nav class="c-breadcrumb" aria-label="breadcrumb">
+    <ol>
+      <li><a href="./index.html">HOME</a></li>
+      <span>></span>
+      <li><a href="./works.html" aria-current="page">WORKS</a></li>
+    </ol>
+  </nav>
+  <section class="p-works--archive">
+    <div class="p-works__inner">
+      <ul class="p-works__list">
+        <li class="p-works__item">
+          <a href="#" class="p-works__link">
+            <figure class="p-works__figure">
+              <img src="../img/works/smoothiesta.jpg" alt="Smoothiesta様 制作実績">
+              <figcaption class="p-works__name">Smoothiesta 様</figcaption>
+            </figure>
+          </a>
+        </li>
+        <li class="p-works__item">
+          <a href="#" class="p-works__link">
+            <figure class="p-works__figure">
+              <img src="../img/works/web-conference.jpg" alt="Web Conference様 制作実績">
+              <figcaption class="p-works__name">Web Conference 様</figcaption>
+            </figure>
+          </a>
+        </li>
+        <li class="p-works__item">
+          <a href="#" class="p-works__link">
+            <figure class="p-works__figure">
+              <img src="../img/works/lamina.jpg" alt="LAMINA様 制作実績">
+              <figcaption class="p-works__name">LAMINA 様</figcaption>
+            </figure>
+          </a>
+        </li>
+        <li class="p-works__item">
+          <a href="#" class="p-works__link">
+            <figure class="p-works__figure">
+              <img src="../img/works/citylab.jpg" alt="CITYLab様 制作実績">
+              <figcaption class="p-works__name">CITYLab 様</figcaption>
+            </figure>
+          </a>
+        </li>
+        <li class="p-works__item">
+          <a href="#" class="p-works__link">
+            <figure class="p-works__figure">
+              <img src="../img/works/tabilog.jpg" alt="TABILOG様 制作実績">
+              <figcaption class="p-works__name">TABILOG 様</figcaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="contact-area" class="p-contact">
+    <div class="container l-container">
+      <h2 class="c-section-title c-title">
+        <span class="c-section-title__main">CONTACT</span>
+        <span class="c-section-title__sub">お問い合わせ</span>
+      </h2>
+      <p class="p-contact__text">WEBサイトの制作のご依頼やお見積りなど、<br class="pc-none">お気軽にご相談ください。</p>
+      <div class="c-button-wrap">
+        <a href="./contact.html" class="c-button c-button--primary c-button--more">MORE</a>
+      </div>
+    </div>
+  </section>
+</main>
+{% include "_partials/footer.njk" %}
+  <button class="c-top-btn is-show" aria-label="ページトップに戻る">↑</button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="../js/common.js"></script>
+</body>
+</html>

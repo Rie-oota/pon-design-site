@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pon-design</title>
+  <meta name="description" content="PON DESIGNは、Webサイト制作・運用・アプリ開発を行うWeb制作会社です。">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+{% include "_partials/header.njk" %}
+<main>
+  <section class="p-sub-header">
+    <div class="container l-container">
+      <h1 class="c-section-title c-title">
+        <span class="c-section-title__main">CONTACT</span>
+        <span class="c-section-title__sub">お問い合わせ</span>
+      </h1>
+    </div>
+  </section>
+  <nav class="c-breadcrumb" aria-label="breadcrumb">
+    <ol>
+      <li><a href="./index.html">HOME</a></li>
+      <span>></span>
+      <li><a href="./contact.html" aria-current="page">CONTACT</a></li>
+    </ol>
+  </nav>
+  <section id="contact" class="p-contact-page">
+    <div class="container l-container">
+      <p class="p-contact-page__lead">Webサイトの制作のご依頼やお見積りなど、<br class="pc-none">お気軽にご相談ください。</p>
+      <form class="p-contact-form" action="#" method="post">
+        <dl class="p-contact-form__list">
+          <div class="p-contact-form__row">
+            <dt>
+              <span>お問い合わせ種別</span>
+              <span class="p-contact-form__required">*必須</span>
+            </dt>
+            <dd class="p-contact-form__radio">
+              <label>
+                <input type="radio" name="contact_type" value="request" required>
+                  お仕事のご依頼・ご相談
+              </label>
+              <label>
+                <input type="radio" name="contact_type" value="estimate">
+                  お見積りのご依頼
+              </label>
+              <label>
+                <input type="radio" name="contact_type" value="recruit">
+                  採用について
+              </label>
+              <label>
+                <input type="radio" name="contact_type" value="other">
+                  その他
+              </label>
+            </dd>
+          </div>
+          <div class="p-contact-form__row">
+            <dt>
+              <label for="name">お名前</label>
+              <span class="p-contact-form__required">*必須</span>
+            </dt>
+            <dd>
+              <input type="text" id="name" name="name" required>
+            </dd>
+          </div>
+          <div class="p-contact-form__row">
+            <dt>
+              <label for="company">会社名</label>
+              <span class="p-contact-form__required">*必須</span>
+            </dt>
+            <dd>
+              <input type="text" id="company" name="company" required>
+            </dd>
+          </div>
+          <div class="p-contact-form__row">
+            <dt>
+              <label for="email">メールアドレス</label>
+              <span class="p-contact-form__required">*必須</span>
+            </dt>
+            <dd>
+              <input type="email" id="email" name="email" required>
+            </dd>
+          </div>
+          <div class="p-contact-form__row">
+            <dt>
+              <label for="tel">
+                電話番号
+                <span class="p-contact-form__note">（半角数字・ハイフンなし）</span>
+              </label>
+            </dt>
+            <dd>
+              <input type="tel" id="tel" name="tel">
+            </dd>
+          </div>
+          <div class="p-contact-form__row">
+            <dt>
+              <label for="message">お問い合わせ内容</label>
+            </dt>
+            <dd>
+              <textarea id="message" name="message" rows="8" placeholder="お問い合わせ内容を具体的にご記入くださいませ。"></textarea>
+            </dd>
+          </div>
+          <div class="p-contact-form__row">
+            <dt>
+              <label for="source">PON DESIGNをどちらでお知りになりましたか？</label>
+              <span class="p-contact-form__required">*必須</span>
+            </dt>
+            <dd>
+              <select id="source" name="source" required>
+                <option value="">選択してください</option>
+                <option value="search">Google/Yahoo検索</option>
+                <option value="sns">SNS</option>
+                <option value="blog">ブログ</option>
+                <option value="friend">友人や知人</option>
+                <option value="other">その他</option>
+              </select>
+            </dd>
+          </div>
+        </dl>
+        <div class="c-button-wrap">
+          <button type="submit" class="c-button c-button--primary p-contact-form__submit">
+            送信する
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+{% include "_partials/footer.njk" %}
+  <button class="c-top-btn is-show" aria-label="ページトップに戻る">↑</button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+  <script src="../js/common.js"></script>
+</body>
+</html>

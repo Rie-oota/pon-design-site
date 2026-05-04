@@ -1,0 +1,19 @@
+{
+  "name": "pon-design",
+  "version": "1.0.0",
+  "main": "pon-design.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-nunjucks-html": "^2.0.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.99.0"
+  }
+}

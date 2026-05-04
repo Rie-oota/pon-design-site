@@ -1,0 +1,486 @@
+:root {
+  --color-text: #333;
+  --color-primary: #391E88;
+  --color-bg-light: #F7F7F7;
+}
+
+/* =========================================
+   Project : Keyvisual
+========================================= */
+.p-keyvisual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  max-height: 900px;
+  padding: 0;
+  color: #fff;
+  background-image: url(../img/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.p-keyvisual__text {
+  text-align: center;
+  transform: translateY(-6%);
+}
+
+.p-keyvisual__title {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 0.15625rem rgba(185, 117, 201, 0.91);
+}
+
+.p-keyvisual__lead {
+  padding-top: 1.25rem;
+  font-family: 'Hiragino Kaku Gothic ProN';
+  font-weight: 300;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  line-height: 1.8;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0.1875rem 0.1875rem rgba(153, 38, 196, 0.16);
+}
+
+.pc-none {
+  display: none;
+}
+
+.p-scroll {
+  position: absolute;
+  right: 1.875rem;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-scroll__text {
+  color: #fff;
+  writing-mode: vertical-rl;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+}
+
+.p-scroll__line {
+  width: 1px;
+  height: 5rem;
+  margin-top: 0.5rem;
+  background-color: #fff;
+  transform-origin: top;
+  animation: scrollFade 1.5s ease-in-out infinite;
+}
+
+@keyframes scrollFade {
+  0% {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* =========================================
+   Project : News
+========================================= */
+
+.p-news .c-section-title {
+  text-align: left;
+}
+
+/* =========================================
+   Project : Service
+========================================= */
+
+.p-service {
+  padding-top: clamp(40px, 4.86vw, 70px);
+  padding-bottom: clamp(60px, 9.03vw, 130px);
+}
+
+.p-service__list {
+  display: flex;
+  gap: clamp(20px, 2.08vw, 30px);
+  margin-top: clamp(20px, 2.08vw, 30px);
+}
+
+.p-service__list img {
+  width: clamp(260px, 24.3vw, 350px);
+  height: clamp(160px, 15.3vw, 220px);
+  object-fit: cover;
+}
+
+.p-service__text {
+  color: var(--color-text);
+  font-family: 'Hiragino Kaku Gothic ProN';
+  letter-spacing: 0.05em;
+}
+
+.p-service__text h3 {
+  margin: clamp(10px, 1.04vw, 15px) 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: clamp(0.875rem, 1.25vw, 1.125rem);
+  line-height: 1.2;
+}
+
+.p-service__text p {
+  font-weight: 300;
+  font-size: clamp(0.8125rem, 1.04vw, 0.9375rem);
+  line-height: 1.8;
+  padding-bottom: clamp(20px, 2.08vw, 30px);;
+}
+
+/* =========================================
+   Project : Works
+========================================= */
+
+.p-works__bg__sp {
+  background: transparent;
+}
+
+.p-works__bg__pc {
+  background: linear-gradient(to right, #fff 50%, #F0F0F0 50%);
+}
+
+.p-works__contents {
+  display: flex;
+  gap: clamp(40px, 7.43vw, 107px);
+  padding-right: clamp(40px, 7.43vw, 107px);
+}
+
+.p-works__slider {
+  position: relative;
+  width: clamp(320px, 52vw, 750px);
+  padding: clamp(40px, 4.17vw, 60px) 0 clamp(60px, 6.25vw, 90px);
+}
+
+.p-works__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 750 / 510;
+  overflow: hidden;
+}
+
+.p-works__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p-works__text {
+  margin: auto 0;
+}
+
+.p-works__text p {
+  margin: clamp(20px, 2.08vw, 30px) 0;
+  color: var(--color-text);
+  white-space: nowrap;
+  text-align: center;
+  font-family: 'Hiragino Kaku Gothic ProN';
+  font-weight: 300;
+  font-size: clamp(0.8125rem, 1.04vw, 0.9375rem);
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+
+/* Swiper custom */
+.p-works__slider .swiper-button-prev::after,
+.p-works__slider .swiper-button-next::after {
+  content: "";
+  width: clamp(10px, 0.83vw, 12px);
+  height: clamp(10px, 0.83vw, 12px);
+  border-top: clamp(2px, 0.24vw, 3.5px) solid var(--color-primary);
+  border-right: clamp(2px, 0.24vw, 3.5px) solid var(--color-primary);
+}
+
+.p-works__slider .swiper-button-prev::after {
+  transform: rotate(-135deg);
+}
+
+.p-works__slider .swiper-button-next::after {
+  transform: rotate(45deg);
+}
+
+.p-works__slider > .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: absolute;
+  right: 0;
+  bottom: clamp(60px, 4vw, 100px);
+  left: auto;
+  top: auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: clamp(4px, 0.42vw, 6px);
+  width: auto;
+}
+
+.p-works__slider .swiper-pagination-bullets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(4px, 0.42vw, 6px);
+}
+
+.p-works__slider .swiper-pagination-bullet {
+  width: clamp(5px, 0.42vw, 6px);
+  height: clamp(5px, 0.42vw, 6px);
+  background: #ccc;
+  opacity: 1;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.p-works__slider .swiper-pagination-bullet-active {
+  background: var(--color-primary);
+  transform: scale(1.2);
+}
+
+/* =========================================
+   Project : Company
+========================================= */
+
+.p-company {
+  margin: clamp(1.5rem, 2.78vw, 2.5rem) 0 clamp(1.5rem, 2.74vw, 2.46875rem) 0;
+  background-image: url(../img/bg-circle.png);
+  background-size: clamp(20rem, 63.9vw, 57.5rem) clamp(13.375rem, 42.7vw, 38.4375rem);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6.1875rem 0;
+}
+
+.p-company__container {
+  background-image: url(../img/bg-face.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 1300 / 416;
+}
+
+.p-company__heading {
+  font-family: 'Hiragino Kaku Gothic ProN';
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-feature-settings: 'palt' on;
+  color: var(--color-text);
+  margin: 1.65625rem 0 2.5rem;
+}
+
+.p-company__heading span {
+  background: linear-gradient(transparent 80%, #F5F534 80%);
+}
+
+.p-company__description {
+  color: var(--color-text);
+  font-family: 'Hiragino Kaku Gothic ProN';
+  font-weight: 300;
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  padding-bottom: 1.875rem;
+}
+
+/* =========================================
+   Project : Recruit
+========================================= */
+
+.p-recruit {
+  padding-bottom: clamp(4rem, 7.64vw, 6.875rem);
+}
+
+.p-recruit__contents {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 77%;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.p-recruit__text {
+  color: var(--color-text);
+  background-color: var(--color-bg-light);
+  width: 40%;
+  padding: clamp(2.5rem, 4.86vw, 4.375rem) 0;
+}
+
+.p-recruit__image {
+  width: 60%;
+}
+
+.p-recruit__contents img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.p-recruit__text p {
+  margin: clamp(1.25rem, 2.08vw, 1.875rem) 0;
+  text-align: center;
+  font-family: 'Hiragino Kaku Gothic ProN';
+  font-weight: 300;
+  font-size: clamp(0.8125rem, 1.04vw, 0.9375rem);
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .p-works__bg__pc {
+    background: transparent;
+  }
+
+  .p-works__bg__sp {
+    display: block;
+    background: linear-gradient(to bottom, #fff 32%, #F0F0F0 68%);
+  }
+
+  .p-works .c-section-title {
+    padding-top: 1.25rem;
+  }
+
+  .p-works__contents {
+    display: block;
+    padding: 0;
+  }
+
+  .p-works__slider {
+    padding: 0 0 1.875rem;
+  }
+
+  .p-works__slider > .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 0.7rem;
+  }
+
+  .p-works__text {
+    padding-bottom: 3.7781rem;
+  }
+
+  .p-works__text p {
+    margin: 1.875rem 0;
+    font-size: 0.875rem;
+  }
+
+  .p-company__container {
+    background: transparent;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+  .p-keyvisual__text {
+    text-align: left;
+    margin-left: clamp(1.25rem, 8vw, 1.875rem);
+  }
+
+  .p-keyvisual__title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+
+  .p-news__contents {
+    display: block;
+  }
+
+  .p-news .c-title {
+    text-align: center;
+    margin-bottom: clamp(1.25rem, 8vw, 1.875rem);
+  }
+
+  .p-news__list li a {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.79;
+  }
+
+  .c-category {
+    margin: 0 1.1875rem;
+    font-size: 0.6875rem;
+  }
+
+  .p-service {
+    padding-bottom: 4.375rem;
+  }
+
+  .p-service__list {
+    display: block;
+    margin-top: 1.875rem;
+  }
+
+  .p-service__list img {
+    width: 100%;
+    height: 13.5169rem;
+    object-position: top;
+  }
+
+  .p-service__text h3 {
+    margin: 0.9375rem 0;
+    font-size: 1.125rem;
+    line-height: 1.22;
+  }
+
+  .p-service__text p {
+    font-size: 0.875rem;
+    line-height: 1.79;
+    padding-bottom: 2.5rem;
+  }
+
+  .p-company {
+    margin: 0;
+    padding: 3.75rem 0 1.875rem;
+    background-image: url(../img/sp_bg-circle.png);
+    background-size: 23.4375rem 35.875rem;
+  }
+
+  .p-company__description {
+    font-size: 0.875rem;
+    line-height: 1.79;
+    padding-bottom: 1.875rem;
+  }
+
+  .p-company__heading {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-top: 1.875rem;
+  }
+
+  .p-recruit {
+    padding-bottom: 2.5rem;
+  }
+
+  .p-recruit__contents {
+    display: block;
+    width: 100%;
+  }
+
+  .p-recruit__text {
+    width: 100%;
+    padding: 4.375rem 0;
+  }
+
+  .p-recruit__image {
+    width: 100%;
+    aspect-ratio: 345 / 200;
+  }
+
+  .p-recruit__text p {
+    font-size: 0.875rem;
+    line-height: 1.79;
+    margin: 1.875rem 0;
+  }
+
+}

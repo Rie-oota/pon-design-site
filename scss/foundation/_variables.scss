@@ -1,0 +1,9 @@
+$color-text: #333;
+$color-primary: #391E88;
+$color-bg-light: #F7F7F7;
+
+:root {
+  --color-text: #{$color-text};
+  --color-primary: #{$color-primary};
+  --color-bg-light: #{$color-bg-light};
+}
