@@ -5,8 +5,7 @@
   padding: rem(70) 0 rem(110);
 
   .p-works__inner {
-    max-width: 1300px;
-    margin: 0 rem(165);
+    padding: 0 rem(95);
   }
 
   .p-works__list {
@@ -42,7 +41,7 @@
     padding: rem(40) 0 rem(80);
 
     .p-works__inner {
-      margin: 0 rem(15);
+      padding: 0;
 
       .p-works__list {
         grid-template-columns: 1fr;

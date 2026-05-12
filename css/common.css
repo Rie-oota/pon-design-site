@@ -47,7 +47,8 @@ img {
 .container,
 .l-container {
   max-width: 1300px;
-  margin: 0 4.375rem;
+  padding: 0 4.375rem;
+  margin: 0 auto;
 }
 
 .l-header {
@@ -588,7 +589,7 @@ img {
   }
   .container,
   .l-container {
-    margin: 0 1rem;
+    padding: 0 1rem;
   }
 
   .c-logo {
