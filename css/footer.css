@@ -1,0 +1,57 @@
+/* =========================================
+   Layout
+========================================= */
+
+.l-footer {
+  width: 100%;
+  background-color: #120E19;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.l-footer p {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  color: #A798B7;
+}
+
+.l-footer p:hover {
+  opacity: 0.6;
+}
+
+/* =========================================
+   Component
+========================================= */
+
+.l-footer .c-nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.75rem, 1.39vw, 1.25rem);
+  margin-bottom: clamp(1rem, 2.08vw, 1.875rem);
+}
+
+.l-footer .c-nav__item a {
+  font-family: 'Montserrat';
+  color: #fff;
+  font-weight: 400;
+  font-size: clamp(0.6875rem, 0.83vw, 0.75rem);
+  line-height: 1.83;
+  letter-spacing: 0.1em;
+}
+
+.l-footer .c-nav__item a:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+
+  .l-footer .c-nav {
+    display: none;
+  }
+
+}
+

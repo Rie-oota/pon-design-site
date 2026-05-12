@@ -1,0 +1,268 @@
+/* =========================================
+   Layout
+========================================= */
+
+.l-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+}
+
+.l-header.is-scroll {
+  background-color: #21054D;
+}
+
+.l-header__inner {
+  min-height: 5.375rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.875rem;
+}
+
+/* =========================================
+   Component
+========================================= */
+
+.l-header .c-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 1.5625rem;
+}
+
+.l-header .c-nav__item a {
+  position: relative;
+  display: inline-block;
+  font-family: 'Montserrat';
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+
+.l-header .c-nav__item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  width: 100%;
+  height: 0.5px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.l-header .c-nav__item a:hover::after {
+  transform: scaleX(1);
+}
+
+.c-nav-sp {
+  display: none;
+}
+
+/* =========================================
+   Project : Drawer
+========================================= */
+.p-drawer {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .p-drawer {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .l-header .c-nav {
+    display: none;
+  }
+
+  .p-drawer * {
+    font: inherit;
+  }
+
+  .drawer_button {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    background: none;
+    border: none;
+    text-align: center;
+    letter-spacing: 0.1em;
+    z-index: 1001;
+    color: #fff;
+    transition: transform .2s,opacity .2s;
+  }
+
+  .drawer_button .drawer_bar {
+    width: 100%;
+    height: 2px;
+    transition: transform 0.2s, opacity 0.2s, background-color 0.2s;
+    transform-origin: center;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: #fff;
+  }
+
+  .drawer_button .drawer_bar_first {
+    transform: translateY(calc(-50% - 7px));
+  }
+
+  .drawer_button .drawer_bar_second {
+    transform: translateY(-50%);
+  }
+
+  .drawer_button .drawer_bar_third {
+    transform: translateY(calc(-50% + 7px));
+  }
+
+  .drawer_button.active {
+    color: #fff;
+  }
+
+  .drawer_button.active .drawer_bar {
+    background-color: #fff;
+  }
+
+  .drawer_button.active .drawer_bar_first {
+    transform: rotate(45deg) translateY(-50%);
+  }
+
+  .drawer_button.active .drawer_bar_second {
+    opacity: 0;
+  }
+
+  .drawer_button.active .drawer_bar_third {
+    transform: rotate(-45deg) translateY(-50%);
+  }
+
+  .drawer_button.active .drawer_menu_text {
+    display: none;
+  }
+
+  .drawer_button.active .drawer_close {
+    display: block;
+  }
+
+  .drawer_close {
+    letter-spacing: 0.08em;
+    display: none;
+  }
+
+  .drawer_menu a {
+    color: #fff;
+  }
+
+  .drawer_menu .drawer_bg {
+    width: 80%;
+    max-width: 1024px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(51, 51, 51, 0.5);
+    display: none;
+    top: 0;
+    left: 0;
+  }
+
+  .drawer_menu .drawer_nav_wrapper {
+    width: min(80vw,360px);
+    max-width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+    transform: translateX(100%);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(347.96deg, #250D65 0%, #7633A4 100%);
+  }
+
+  .drawer_menu .drawer_nav_wrapper.open {
+    transform: translate(0);
+  }
+
+  .drawer_menu.left .drawer_nav_wrapper {
+    transform: translate(-80%);
+    right: auto;
+    left: 0;
+  }
+
+  .drawer_menu.left .drawer_nav_wrapper.open {
+    transform: translate(0);
+  }
+
+  .drawer_menu .drawer_nav {
+    padding: 50% 0;
+    color: #fff;
+  }
+
+  .drawer_menu .drawer_nav li {
+    padding: 11px 0;
+    text-align: center;
+  }
+
+  .drawer-en {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .l-header__inner {
+    height: 4rem;
+  }
+
+  .c-logo {
+    width: clamp(6rem, 32vw, 7.5rem);
+  }
+
+  .drawer_menu .drawer_nav_wrapper {
+    width: 100vw;
+  }
+
+  .c-nav-sp {
+    display: block;
+    margin-bottom: 1.875rem;
+  }
+
+  .c-nav-sp__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.75rem, 1.39vw, 1.25rem);
+    margin-bottom: 0.9375rem;
+  }
+
+  .c-nav-sp__list + .c-nav-sp__list {
+    margin-top: 0.9375rem;
+  }
+
+  .c-nav-sp__item a {
+    font-family: 'Montserrat';
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1;
+    letter-spacing: 0.1em;
+  }
+
+  .c-nav-sp__item a:hover {
+    opacity: 0.6;
+  }
+
+}

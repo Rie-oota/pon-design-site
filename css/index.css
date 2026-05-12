@@ -13,7 +13,6 @@
   justify-content: center;
   align-items: center;
   height: 100svh;
-  max-height: 900px;
   padding: 0;
   color: #fff;
   background-image: url(../img/hero.jpg);
@@ -142,6 +141,10 @@
 /* =========================================
    Project : Works
 ========================================= */
+
+#works .l-container {
+  padding: 0;
+}
 
 .p-works__bg__sp {
   background: transparent;
@@ -337,6 +340,14 @@
   letter-spacing: 0.05em;
 }
 
+@media screen and (max-width: 1300px) {
+
+  #works .l-container {
+    padding: 0 4.375rem;
+  }
+
+}
+
 @media screen and (max-width: 1024px) {
 
   .p-works__bg__pc {
@@ -437,6 +448,10 @@
     font-size: 0.875rem;
     line-height: 1.79;
     padding-bottom: 2.5rem;
+  }
+
+  #works .l-container {
+    padding: 0 1rem;
   }
 
   .p-company {
